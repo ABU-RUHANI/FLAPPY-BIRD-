@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Flappy Bird: Premium Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="game-container">
+        <div class="sky-bg"></div>
+        <div class="animated-clouds"></div>
+
+        <canvas id="gameCanvas" width="480" height="640"></canvas>
+
+        <div id="score-badge" class="glass-ui">
+            <span id="current-score">0</span>
+        </div>
+
+        <div id="start-menu" class="screen-overlay glass-ui active">
+            <h1 class="game-title">FLAPPY<br><span class="accent-text">BIRD</span></h1>
+            <p class="game-subtitle">Premium Edition</p>
+            <div class="stats-row">
+                <p>Local Best: <span id="menu-high-score">0</span></p>
+            </div>
+            <button id="start-btn" class="cta-button">Launch Game</button>
+            <p class="controls-hint">Press Space, Click, or Tap to Fly</p>
+        </div>
+
+        <div id="game-over-menu" class="screen-overlay glass-ui">
+            <h2 class="menu-title">Game Over</h2>
+            <div class="score-card">
+                <div class="score-box">
+                    <span class="label">Score</span>
+                    <span id="final-score" class="val">0</span>
+                </div>
+                <div class="score-box">
+                    <span class="label">Best</span>
+                    <span id="best-score" class="val">0</span>
+                </div>
+            </div>
+            <div id="new-high-badge" class="hidden-badge">NEW BEST!</div>
+            <button id="restart-btn" class="cta-button">Fly Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
